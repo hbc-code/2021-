@@ -1,0 +1,830 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+@keyframes piaodong{
+from{
+bottom: 0px;
+}
+to{
+bottom: 5px;
+}
+}
+@keyframes piaodong1{
+from{
+bottom: 50px;
+}
+to{
+bottom: 55px;
+}
+}
+.body {
+  font-size: 14px;
+  box-sizing: border-box;
+  min-width: 1600px;
+}
+.backtotop-wrap{
+  width: 40px;
+  height: 40px;
+  border: #cac8c8 3px solid;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10%;
+  right: 6%;
+  z-index: 100;
+  opacity: 0;
+}
+.backtotop{
+  animation-name: piaodong;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#font1{
+  opacity: 0;
+  transition: 1s;
+}
+
+.iconfont3{
+  color: black;
+  font-size: 30px;
+  font-family: "iconfont"!important;
+}
+.video {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  min-height: 680px;
+  max-height: 840px;
+  overflow-Y: hidden;
+}
+.shouyeshiping {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+}
+.nav {
+  height: 10%;
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  background-color: none;
+}
+.logo {
+  box-sizing: border-box;
+}
+.xinguan {
+  width: 170px;
+}
+.nav-right {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-right a {
+  font-size: 25px;
+  margin: 0px 10px;
+  color: aliceblue;
+}
+a:hover {
+    color:rgb(182, 154, 45);
+    transition: color .3s;
+}
+.invitation-wrap {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.invitation {
+  color: aliceblue;
+  text-align: center;
+  font-weight: 600;
+}
+.invitationp1 {
+  font-size: 35px;
+}
+.invitationp2 {
+  font-size: 45px;
+  margin: 10px 0px;
+}
+.invitationp3 {
+  margin: 10px auto 0px;  
+  position: relative;
+  letter-spacing: 23px;
+  margin-bottom: 50px;
+}
+.invitationp3::before {
+    content: "";
+    display: block;
+    width: 74px;
+    height: 2px;
+    position: absolute;
+    top: calc(50% - 1px);
+    background-image: linear-gradient(270deg,hsla(0,0%,100%,0),#fff 47%,hsla(0,0%,100%,0));
+}
+.invitationp3::after{
+  content: "";
+  display: block;
+  width: 74px;
+  height: 2px;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 40px;
+  background-image: linear-gradient(270deg,hsla(0,0%,100%,0),#fff 47%,hsla(0,0%,100%,0));}
+.button-join{
+    font-size: 20px;
+    border-radius: 50px;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px transparent;
+}
+.icon{
+    height: 40px;
+    width: 40px;
+    border: white 1px solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0px;
+    left: 49%;
+    bottom: 40px;
+    cursor: pointer;
+}
+.icondiv{
+  position: relative;
+}
+.iconfont1{
+    font-family: "iconfont"!important;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: -18px;
+    animation-name: piaodong;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+}
+.xuxian-bgc{
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+}
+.xuxian-wrap{
+  margin: 0px auto;
+  width: 1px;
+}
+.xuxian::before{
+    content: '';
+    display: block;
+    height: 36px;
+    border-left: 1px dashed #fff;
+    top: 14px;
+}
+.introduction-wrap{
+    width: 100%;
+    height: 670px;
+}
+.introduction{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    width: 1400px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.introduction-left{
+    width: 670PX;
+    height: 600PX;
+    position: relative;
+}
+.introduction-left-article{
+    background-color: #f2f2f2;
+    border-radius: 40px;
+    height: 400px;
+    padding: 30px 70px;
+}
+.introduction-left-head{
+    font-size: 40px;
+}
+.introduction-left-body{
+    font-size: 20px;
+    line-height: 38px;
+    margin: 15px 0px;
+}
+.introduction-left-img{
+  width: 500px;
+  height: 245px;
+  position: absolute;
+  bottom: 0;
+}
+.member{
+  position: relative;
+  top: -5px;
+}
+.introduction-left-bottom span{
+  font-size: 20px;
+  background-color: #f2f2f2;
+  padding: 3px 6px;
+  transition: 1s;
+  display: inline;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0 ;
+  left: 30%;
+}
+
+.introduction-right-article{
+    width: 650PX;
+    height: 600PX;
+    background-color: #f2f2f2;
+    border-radius: 40px;
+    padding: 50px 30px 0px;
+    font-size: 20px;
+    line-height: 38px;
+    position: relative;
+    overflow: hidden;
+}
+.introduction-right-img{
+    box-sizing:border-box;
+    position: absolute;
+    bottom: -320px;
+    right: -410px;
+    border: 30px #535353 solid;
+    background-color: #535353;
+    border-right: none;
+    border-bottom: none;
+    border-radius: 40px 0px;
+    transition: 1s;
+}
+.member{
+    width: 400px;
+    height: 320px;
+    border-radius: 20px 0px 20px 0px;
+}
+.departmentintroduction-wrap{
+  height: 620px;
+  width: 1500px;
+  margin: 0px auto;
+}
+.departmentintroduction-title{
+  position: relative;
+}
+.departmentintroduction-title span{
+  position: absolute;
+  right: 8%;
+  font-size: 30px;
+}
+.lunbotu-wrap{
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.lunbotu-outer{
+  margin: 0px auto;
+  margin-top: 70px;
+  width: 1000px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.lunbotulist{
+display: flex;
+justify-content: space-around;
+height: 400px;
+width: 6000px;
+font-size: 20px;
+transition: 1s;
+}
+.lunbotu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lunbotu-act{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lunbotu-right{
+  width: 350px;
+  margin-left: 60px;
+}
+.lunbotu-h{
+  font-size: 35px;
+}
+.lunbotu-right div{
+  margin-top: 30px;
+}
+.lunbotu-nav-wrap{
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+}
+
+.lunbotu-nav{
+display: flex;
+list-style: none;
+}
+.lbtbts{
+  height: 12px;
+  width: 25px;
+  background-color: #f2f2f2;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin: 0px 3px;
+  border: none;
+}
+.lunbotu-nav button:hover{
+  background-color: rgb(199, 202, 199);
+}
+.lbtbts-act{
+  height: 12px ;
+  width: 35px ;
+  background-color: rgba(43, 36, 36, 0.644) !important;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin: 0px 3px;
+  border: none;
+}
+
+.productpresentation-bgc{
+  width: 100%;
+}
+.productpresentation-wrap{
+  height: 460px;
+  width: 1500px;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.productpresentation-left{
+  height: 100%;
+  width: 400px;
+  padding: 30px 40px;
+  margin: 0px 20px;
+  background: linear-gradient(270deg,#c9dae7,#ebeff9);
+  border-radius: 40px;
+  position: relative;
+  left: -120px;
+  opacity: 0;
+  transition: 1s;
+}
+.productpresentation-left-title{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+}
+.productpresentation-left-h{
+  text-align: center;
+  font-size: 20px;
+  color: #6593a8;
+  font-weight: 600;
+}
+.productpresentation-left-p{
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 20px 0px;
+}
+.productpresentation-left-img{
+width: 300px;
+position: absolute;
+bottom: -40px;
+}
+.productpresentation-right{
+  display: flex;
+  flex-direction: column;
+}
+.productpresentation-right-top{
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  left: -20px;
+  top: -100px;
+  transition: 1s;
+  height: 220px;
+  opacity: 0;
+}
+.productpresentation-right-top-left{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #f2f2f2;
+width: 280px;
+height: 220px;
+border-radius: 40px;
+font-size: 40px;
+font-weight: 600;
+position: relative;
+left: -10px;
+}
+.productpresentation-right-top-right{
+ display: flex;
+ text-align: center;
+ background-color: #f2f2f2;
+ border-radius: 40px;
+ height: 220px;
+ width: 540px;
+ margin: 0px 50px;
+ padding: 40px 45px;
+ font-size: 20px;
+ font-weight: 300;
+ position: relative;
+ right: -20px;
+}
+.productpresentation-right-bottom{
+margin-top: 20px;
+padding: 30px 50px;
+height: 220px;
+width: 900px;
+display: flex;
+justify-content: space-around;
+border-radius: 40px;
+background: linear-gradient(90deg,#f1f2d0,#b1d8b4);
+position: relative;
+left: -30px;
+bottom: -100px;
+transition: 1s;
+opacity: 0;
+}
+.productpresentation-right-bottom-img{
+  width: 170px;
+  height: 160px;
+}
+.productpresentation-right-bottom-article{
+  margin-left: 40px;
+}
+.productpresentation-right-bottom-title{
+  font-size: 30px;
+  font-weight: 600;
+}
+.productpresentation-right-bottom-h{
+  font-size: 20px;
+  color: #6a9b71;
+  font-weight: 600;
+}
+.productpresentation-right-bottom-p{
+  font-size: 18px;
+  margin-top: 25px;
+  font-weight: 300;
+}
+.interview-wrap{
+  height: 650px;
+  margin: 0px auto;
+  margin-top: 80px;
+}
+.interview-title{
+  font-size: 40px;
+  margin: 40px 0px;
+  text-align: center;
+}
+.interview-body{
+  width: 1460px;
+  height: 540px;
+  padding: 30px 80px;
+  margin: 0px auto;
+  display: flex;
+
+}
+.interview-left-title{
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+.interview-left-video-wrap{
+  width: 600px;
+  border-radius: 10px;
+ overflow: hidden;
+}
+.interview-left-video{
+  z-index: -1;
+}
+.interview-right{
+  width: 800px;
+  height: 100%;
+  background-color: #f2f2f2;
+  margin-left: 90px;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes piaoguo1 {
+  0%{
+    margin-right: -130px;
+    opacity: 0;
+  }
+  50%{
+    margin-left: -730px;
+    opacity: 1;
+  }
+  100%{
+    margin-right: -130px;
+    opacity: 0;
+  }
+}
+@keyframes piaoguo2 {
+  0%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(800PX);
+  
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+.interview-right-r span{
+  font-size: 12px;
+  line-height: 21px;
+  animation-name: piaoguo1;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  color: rgba(0,0,0,.85);
+}
+.interview-right-r{
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: -130px;
+}
+.interview-right-r1{
+  animation-duration: 15s!important;
+}
+.interview-right-r2{
+  animation-duration: 11s!important;
+}
+.interview-right-r3{
+  animation-duration: 12s!important;
+}
+.interview-right-r4{
+  animation-duration: 16s!important;
+}
+.interview-right-r5{
+  animation-duration: 12s!important;
+}
+.interview-right-r6{
+  animation-duration: 15s!important;
+}
+.interview-right-r7{
+  animation-duration: 18s!important;
+}
+.interview-right-r8{
+  animation-duration: 20s!important;
+}
+.interview-right-r9{
+  animation-duration: 10s!important;
+}
+.interview-right-r10{
+  animation-duration: 13s!important;
+}
+.interview-right-r11{
+  animation-duration: 12s!important;
+}
+.interview-right-r12{
+  animation-duration: 10s!important;
+}
+.interview-right-r13{
+  animation-duration: 11s!important;
+}
+.interview-right-r14{
+  animation-duration: 13s!important;
+}
+.interview-right-r15{
+  animation-duration: 14s!important;
+}
+.interview-right-r16{
+  animation-duration: 16s!important;
+}
+.interview-right-r17{
+  animation-duration: 14s!important;
+}
+.interview-right-r18{
+  animation-duration: 17s!important;
+}
+.interview-right-r19{
+  animation-duration: 18s!important;
+}
+.interview-right-r20{
+  animation-duration: 15s!important;
+}
+.interview-right-r21{
+  animation-duration: 17s!important;
+}
+.interview-right-r22{
+  animation-duration: 20s!important;
+}
+.interview-right-r23{
+  animation-duration: 13s!important;
+}
+
+.interview-right-l{
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: -170px;
+  bottom: 0;
+}
+.interview-right-l span{
+  font-size: 12px;
+  line-height: 21px;
+  animation-name: piaoguo2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  color: rgba(0,0,0,.85);
+}
+.interview-right-l22{
+  animation-duration: 15s!important;
+}
+.interview-right-l21{
+  animation-duration: 11s!important;
+}
+.interview-right-l20{
+  animation-duration: 13s!important;
+}
+.interview-right-l19{
+  animation-duration: 15s!important;
+}
+.interview-right-l18{
+  animation-duration: 12s!important;
+}
+.interview-right-l16{
+  animation-duration: 15s!important;
+}
+.interview-right-l17{
+  animation-duration: 18s!important;
+}
+.interview-right-l15{
+  animation-duration: 20s!important;
+}
+.interview-right-l14{
+  animation-duration: 14s!important;
+}
+.interview-right-l13{
+  animation-duration: 12s!important;
+}
+.interview-right-l12{
+  animation-duration: 16s!important;
+}
+.interview-right-l11{
+  animation-duration: 15s!important;
+}
+.interview-right-l10{
+  animation-duration: 11s!important;
+}
+.interview-right-l9{
+  animation-duration: 13s!important;
+}
+.interview-right-l8{
+  animation-duration: 14s!important;
+}
+.interview-right-l7{
+  animation-duration: 12s!important;
+}
+.interview-right-l6{
+  animation-duration: 18s!important;
+}
+.interview-right-l5{
+  animation-duration: 15s!important;
+}
+.interview-right-l4{
+  animation-duration: 20s!important;
+}
+.interview-right-l3{
+  animation-duration: 16s!important;
+}
+.interview-right-l2{
+  animation-duration: 21s!important;
+}
+.interview-right-l1{
+  animation-duration: 17s!important;
+}
+
+.qidai{
+  cursor: pointer;
+}
+.recruit-bgc{
+  width: 100%;
+  margin: 0px auto;
+}
+.recruit-wrap{
+  margin: 0px auto;
+  margin-top: 100px;
+  height: 630px;
+  width: 800px;
+  padding: 70px 0px 0px 0px;
+  position: relative;
+}
+.recruit-title{
+  font-size: 30px;
+  position: absolute;
+  left: -40px;
+  top: -50px;
+}
+.recruit-top{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 40%;
+  margin: 0px auto;
+}
+.recruit-top div{
+  font-size: 20px;
+  text-align: center;
+}
+.recruit-top-icon{
+  margin-top: 55px;
+  height: 40px;
+}
+.iconfont2{
+  font-family: "iconfont"!important;
+  font-size: 30px;
+  color: black;
+}
+.recruit-mid{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+.recruit-bottom{
+  display: flex;
+  justify-content: center;
+}
+.recruit-bottom div{
+  border-radius: 10px;
+  background-color: #d6edee;
+  margin: 20px 40px;
+  padding: 3px 6px;
+  font-size: 20px;
+}
+.ending-bgc{
+  width: 100%;
+  background-color: #f2f2f2;
+}
+.ending-wrap{
+  width: 1600px;
+  height: 125px;
+  padding: 0px 260px;
+  padding-top: 10px;
+  margin: 0px auto;
+  overflow: hidden;
+  position: relative;
+}
+.ending-mid{
+  height: 60%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.ending-line1{
+  height: 80%;
+  width: 20px;
+  border: none;
+  border-left: 1px black solid;
+
+}
+.ending-text1{
+font-size: 12px;
+text-align: center;
+}
+.ending-text1 span{
+  font-size: 17px;
+}
+.ending-highlight{
+  font-size: 20px;
+}
+.ending-img2 div{
+text-align: center;
+}
+.ending-text2{
+text-align: center;
+font-size: 5px;
+position: absolute;
+bottom: 0px;
+left: 50%;
+transform: translateX(-50%);
+}

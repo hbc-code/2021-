@@ -1,0 +1,43 @@
+.content-wraper {
+  width: 500px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+  .song-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+  .song-list-item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding: 0px 30px;
+
+    transition: 1s;
+    cursor: pointer;
+    background-color: antiquewhite;
+  }
+  .song-list-item:hover{
+    background-color: #f2f2ff;
+  }
+  .song-list-item img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 20px 0;
+  }
+  .songs-container div{
+    margin: 5px auto;
+    transition: 1s;
+    cursor: pointer;
+  }
+  .songs-container div:hover{
+    background-color: #f2f2ff;
+    border-radius: 5px  5px;
+  }
+  .lyric{
+    text-align: center;
+  }

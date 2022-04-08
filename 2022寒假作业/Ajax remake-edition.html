@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Ajax.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content-wraper">
+        <div class="song-list">
+          <div class="song-list-item">
+            <img src="" alt="" class="item-img">
+            <span class="item-text"></span>
+          </div>
+          <div class="song-list-item">
+            <img src="" alt="" class="item-img">
+            <span class="item-text"></span>
+          </div>
+          <div class="song-list-item">
+            <img src="" alt="" class="item-img">
+            <span class="item-text"></span>
+          </div>
+          <div class="song-list-item">
+            <img src="" alt="" class="item-img">
+            <span class="item-text"></span>
+          </div>
+          
+        </div>
+        <div class="songs-container">
+            <div class="song1"></div>
+            <div class="song2"></div>
+            <div class="song3"></div>
+            <div class="song4"></div>
+            <div class="song5"></div>
+            <div class="song6"></div>
+            <div class="song7"></div>
+            <div class="song8"></div>
+            <div class="song9"></div>
+            <div class="song10"></div>
+        </div>
+      </div>
+      <div class="lyric"></div>
+      <script>
+        const song_list = document.querySelector('.song-list')
+        const item_img = document.getElementsByClassName("item-img")[0]
+        const item_text = document.getElementsByClassName("item-text")[0]
+        const item_img1 = document.getElementsByClassName("item-img")[1]
+        const item_text1 = document.getElementsByClassName("item-text")[1]
+        const item_img2 = document.getElementsByClassName("item-img")[2]
+        const item_text2 = document.getElementsByClassName("item-text")[2]
+        const item_img3 = document.getElementsByClassName("item-img")[3]
+        const item_text3 = document.getElementsByClassName("item-text")[3]
+        const song_list_item = document.querySelectorAll(".song-list-item")
+        const songs_container = document.querySelector('.songs-container')
+        const song = document.querySelectorAll('.songs-container > div')
+        // 获取歌词dom元素
+        const geci = document.querySelector(".lyric")
+        //定义ajax函数
+        const Ajax = (method, url, data) => {
+            return new Promise((resolve, reject) => {
+                const xhr = new XMLHttpRequest();
+                xhr.open(method, url, true);
+                xhr.send(data);
+                xhr.onreadystatechange = () => {
+                if (xhr.readyState == 4) {
+                    if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+                        let res = JSON.parse(xhr.response);
+                        resolve(res)
+                    } else {
+                        reject("请求失败")
+                    }
+                }
+            }
+            })
+        }
+        let getsonglist = Ajax('get','http:music.eleuu.com/personalized?limit=4')
+        getsonglist.then((res) =>{
+            const { result } = res
+            console.log(result)
+            let dataarray = [result[0],result[1],result[2],result[3]]
+            const data = result[0]
+            const data1 = result[1]
+            const data2 = result[2]
+            const data3 = result[3]
+            let { name, picUrl } = data
+            item_img.src = picUrl
+            item_text.innerText = name
+            item_img1.src = data1.picUrl
+            item_text1.innerText = data1.name
+            item_img2.src = data2.picUrl
+            item_text2.innerText = data2.name
+            item_img3.src = data3.picUrl
+            item_text3.innerText = data3.name
+            for(let i=0;i<song_list_item.length;i++){
+                song_list_item[i].onclick = function(){
+                    const songlist_id = dataarray[i].id
+                    Ajax('get',`http://music.eleuu.com/playlist/detail?id=${songlist_id} `)
+                    .then((res) => {
+                        const songs = res.playlist.tracks
+                        for(let i=0;i<song.length;i++){
+                            song[i].innerText = songs[i].name
+                        }
+                        for(let i = 0;i<songs.length;i++){
+                            song[i].onclick = function(){
+                                const lyric_id = songs[i].id
+                                return Ajax('get',`http:music.eleuu.com/lyric?id=${lyric_id}`)
+                                .then((res) => {
+                                    const lyr = res
+                                    console.log(lyr);
+                                    const lyr_content = lyr.lrc.lyric
+                                    console.log(lyr_content);
+                                    lyr_content1 = lyr_content.replace(/\[.*\]/g,"");
+                                    geci.innerText = lyr_content1
+                                })
+                            }
+                        }
+                    })
+                }
+            }
+        })
+        
+      </script>
+</body>
+</html>
